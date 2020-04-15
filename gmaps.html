@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SAP google maps</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 80%;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SAP google maps</h1>
+    <audio controls autoplay>
+      <source src="https://file-examples.com/wp-content/uploads/2017/11/file_example_MP3_700KB.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="map"></div>
+    <script>
+      var map;
+      function initMap() {
+        var sap = {lat: 49.277311, lng: -123.117862};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 16, center: sap});
+
+        var image = {
+          url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/SAP_2011_logo.svg/1024px-SAP_2011_logo.svg.png',
+          scaledSize: new google.maps.Size(100, 60)
+        }
+        var marker = new google.maps.Marker({
+          position: sap,
+          label: 'Hello SAP',
+          icon: image,
+          map: map});
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJcSXfosQwrHI8LYkQyVC77JRBfRjKkY0&callback=initMap"
+    async defer></script>
+  </body>
+</html>
