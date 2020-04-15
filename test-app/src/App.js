@@ -6,15 +6,24 @@ import {
   Link
 } from "react-router-dom";
 import logo from './logo.svg';
+import leon from './leon.jfif';
+import julian from './julian.jfif';
+import segal from './segal.jpg';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={leon}/>
+        <p> Leon </p>
+        <img src={julian}/>
+        <p> Julian </p>
+        <img src={segal}/>
+        <p> Segal </p>
         <p>
-          Home Page
+          Team: Honey Badgers
         </p>
       </header>
     </div>

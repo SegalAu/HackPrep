@@ -10,48 +10,29 @@ import ListItem from '@material-ui/core/ListItem';
 // Pages / Resources
 import './index.css';
 import App from './App';
-import TestPage from './Pages/FeatureTogglePage';
+import FeatureTogglePage from './Pages/FeatureTogglePage';
+import ModalPage from './Pages/ModalPage';
 import NotFoundPage from './Pages/NotFoundPage.js';
 import * as serviceWorker from './serviceWorker';
 
-this.state = {menuOpen: false};
-
-const toggleMenu = () => (event) => {
-  if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-    return;
-  }
-
-  this.setState(state => ({
-    menuOpen: !state.menuOpen
-  }));
-}
-
-const menuList = (anchor) => (
-  <List>
-    <ListItem>
-      <Link to="/"Home></Link>
-    </ListItem>
-    <ListItem>
-      <Link to="/Pages/FeatureTogglePage">Feature Toggles</Link>
-    </ListItem>
-  </List>
-);
 
 const routing = (
   <Router>
     <div>
-      <Button onClick={toggleMenu}>{anchor}</Button>
-      <Drawer anchor="left" open={this.state.menuOpen} 
-              onOpen={toggleMenu} onClose={toggleMenu}>
-        {menuList}
-      </Drawer>
-      <Switch>
-        <Route exact path="/" component={App}/>
-        <Route exact path="/Pages/FeatureTogglePage" component={TestPage}/>
-        <Route path="/Pages/FeatureTogglePage/:testNumber" component={TestPage}/>
-        <Route component={NotFoundPage}/>
-      </Switch>
-      
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/Pages/FeatureTogglePage">Feature Toggle</Link>
+        </li>
+        <li>
+          <Link to="/Pages/ModalPage">Modal Page</Link>
+        </li>
+      </ul>
+      <Route exact path="/" component={App} />
+      <Route path="/Pages/FeatureTogglePage" component={FeatureTogglePage} />
+      <Route path="/Pages/ModalPage" component = {ModalPage}/>
     </div>
   </Router>
 )
