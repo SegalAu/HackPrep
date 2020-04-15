@@ -1,7 +1,7 @@
 
 var deck_id;
 var jsonresponse;
-var count = 1;
+var count = 51;
 function apiCall() {
     let request = new XMLHttpRequest();
     request.open("GET", "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1");
@@ -16,7 +16,7 @@ function apiCall() {
             console.log(draw.response);
             var image = JSON.parse(draw.response).cards[0].image;
             document.getElementById("123").src = image;
-            document.getElementById("counter").innerHTML = count++;
+            document.getElementById("counter").innerHTML = count--;
         }
     }
 }
