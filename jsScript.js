@@ -21,6 +21,11 @@ function apiCall() {
     }
 }
 
+function reset() {
+    count = 52;
+    document.getElementById("counter").innerHTML = count--;
+}
+
 // function drawCard() {
 //     let request = new XMLHttpRequest();
 //     request.open("GET", "https://deckofcardsapi.com/api/deck/" + deck_id + "/draw/?count=2");
