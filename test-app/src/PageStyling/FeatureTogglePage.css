@@ -1,0 +1,43 @@
+.FeatureToggleBackgroundDay {
+    color: black;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    margin-top: 20%;
+    height: 70%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.FeatureToggleBackgroundNight {
+    color: white;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    margin-top: 20%;
+    height: 70%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.FeatureToggleHeaderDay {
+    background-color: white;
+    color: black;
+}
+
+.FeatureToggleHeaderNight {
+    background-color: black;
+    color: white;
+}
+
+.FeatureToggleBackgroundBtnDay {
+    background-color: white;
+    color: black;
+}
+
+.FeatureToggleBackgroundBtnNight {
+    background-color: black;
+    color: white;
+}
